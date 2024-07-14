@@ -1,15 +1,13 @@
-from typing import Any
+def filter_by_state(list_of_dicts: list[dict[str, str | int]], state: str = "EXECUTED") -> list[dict[str, str | int]]:
+    """Функция сортирует словари в списках по значению ключа state."""
+    result_list: list[dict[str, str | int]] = []
+    for item in list_of_dicts:
+        if item["state"] == state:
+            result_list.append(item)
+    return result_list
 
 
-def filter_by_state(list_of_data: Any, state="EXECUTED") -> Any:
-    """Функция возвращающая список словарей, отсортированных по state"""
-    right_list = []
-    for dict in list_of_data:
-        if dict["state"] == state:
-            right_list.append(dict)
-    return right_list
-
-
-def sort_by_date(list_of_data: Any, key="date", reverse=True) -> Any:
+def sort_by_date(list_of_dicts: list[dict[str, str | int]], ascending: bool = False) -> list[dict[str, str | int]]:
     """Функция возвращающая список словарей отсортированных по дате"""
-    return sorted(list_of_data, key=lambda x: x[key], reverse=reverse)
+    list_of_dicts.sort(key=lambda x: x["date"], reverse=not ascending)
+    return list_of_dicts
