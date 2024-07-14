@@ -10,11 +10,10 @@ IT-отдел крупного банка делает новую
 написана функция для работы с типами 
 и номерами карт и счетов.**
 
-**3. В файле processing.py функции сортировки 
-по заданному значению и дат.**
+**3. В файле processing.py функции сортировки
 по заданному значению и дат.**
 
- 4. Зависимости с настройками
+**4. Зависимости с настройками
 [tool.poetry]
 name = "homework-10-1"
 version = "0.1.0"
@@ -25,10 +24,6 @@ packages = [{include = "homework_10"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-mypy = "^1.10.1"
-flake8 = "^7.1.0"
-black = "^24.4.2"
-isort = "^5.13.2"
 
 
 [tool.poetry.group.lint.dependencies]
@@ -71,3 +66,4 @@ exclude = '''
 
 [tool.isort]
 line_length = 119 
+**
