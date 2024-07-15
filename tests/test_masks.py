@@ -45,5 +45,3 @@ def test_get_mask_account_invalid_len():
 def test_get_mask_account_invalid_len_zero():
     with pytest.raises(ValueError):
         get_mask_account(' ')
-
-
