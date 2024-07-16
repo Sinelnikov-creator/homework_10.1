@@ -40,7 +40,7 @@ def mask_account_cart(type_and_number_cart: str) -> str:
     ready_data = ""
     for values_cart in new_list:
         translate_into_a_line = " ".join(values_cart)
-        ready_data += translate_into_a_line + "\n"
+        ready_data += translate_into_a_line
     return ready_data
 
 
