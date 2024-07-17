@@ -4,10 +4,12 @@ def filter_by_state(list_of_dicts: list[dict[str, str | int]], state: str = "EXE
     for item in list_of_dicts:
         if item["state"] == state:
             result_list.append(item)
+        else:
+            continue
     return result_list
 
 
-def sort_by_date(list_of_dicts: list[dict[str, str | int]], ascending: bool = False) -> list[dict[str, str | int]]:
+def sort_by_date(list_of_dicts: list[dict[str, str | int]], reverse=True) -> list[dict[str, str | int]]:
     """Функция возвращающая список словарей отсортированных по дате"""
-    list_of_dicts.sort(key=lambda x: x["date"], reverse=not ascending)
+    list_of_dicts.sort(key=lambda x: x["date"], reverse=True)
     return list_of_dicts
