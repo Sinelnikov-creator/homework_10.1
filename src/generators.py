@@ -37,7 +37,7 @@ def card_number_generator(start: int = 1, finish: int = 9999999999999999) -> Gen
         if start >= finish:
             break
         start = str(start)
-        not_formated_card = start.rjust(16,"0")
+        not_formated_card = start.rjust(16, "0")
         card_number_list = re.findall(r"(\d{4})", not_formated_card)
         yield " ".join(card_number_list)
         start += 1
