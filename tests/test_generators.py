@@ -81,3 +81,7 @@ def test_filter_by_currency(get_good_data, get_bad_data):
         }
     ]
     assert list(filter_by_currency(get_bad_data, "USD")) == []
+
+
+
+print(globals())
